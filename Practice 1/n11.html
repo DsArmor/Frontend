@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 11</title>
+</head>
+
+<body>
+
+	<form action="../action_page.php" style="border:1px solid #ccc">
+		<div class="container">
+			<h1>Вход</h1>
+
+			<label for="fio"><b>ФИО</b></label>
+			<input type="text" name="fio" required>
+
+			<label for="phone"><b>Телефон</b></label>
+			<input type="number" name="phone" required>
+
+			<label for="Email"><b>Email</b></label>
+			<input type="text" name="Email" required>
+
+			<label for="psw"><b>Пароль</b></label>
+			<input type="password" name=psw" required>
+
+			<h5>Ваш пол</h5>
+			<p>
+				<input type="radio" value="man" checked name="gender" />мужской
+			</p>
+			<p>
+				<input type="radio" value="woman" name="gender" />женский
+			</p>
+			<input type="checkbox">
+			<span>Показывать уведомления?</span>
+
+		</div>
+	</form>
+
+	<br>
+	<br>
+	<div class="dropdown">
+		<button class="dropbtn">Выпадающее меню</button>
+		<div class="dropdown-content">
+			<a href="#">Не трогай</a>
+			<a href="#">Точно не трогай</a>
+			<a href="#">Категорически не трогай</a>
+		</div>
+	</div>
+
+</body>
+
+</html>
