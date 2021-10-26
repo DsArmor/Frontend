@@ -160,7 +160,7 @@ body{
 	}
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
 	.header__container{
 		flex-direction: column;
 	}
@@ -169,14 +169,15 @@ body{
 	}
 }
 
-
 /* --------MAIN------------------- */
 
 .page{
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
 	flex: 1 1 auto;
 }
 
 .page__main-block {
+	
 }
 .main-block {
 	position:relative;
@@ -206,28 +207,17 @@ body{
 	backdrop-filter: blur(60px);
 }
 
-.main-block__image{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	object-fit: cover;
-}
-
 @media (max-width: 628px){
-	.main-block__title{
+	.main-block__container{
 		display: none;
 	}
-
-	.main-block__image{
-		height: 40%;
+	.page{
+		height: 120px;
 	}
 }
-
 
 /* --------ПОДВАЛ------------------- */
 
 .footer{
-	
+	height: 1200px;
 }
