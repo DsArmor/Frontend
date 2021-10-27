@@ -151,12 +151,12 @@ body{
 	font-weight: 600;
 	color: inherit;
 	line-height: 171%;
+	font-size: 20px;
 }
-
 
 @media (max-width: 628px){
 	.menu__link {
-		font-size: 18px;
+		font-size: 22px;
 	}
 }
 
@@ -165,23 +165,23 @@ body{
 		flex-direction: column;
 	}
 	.header__logo{
-		padding: 8px 0px 0px 0px;
+		padding: 8px 0px 7px 0px;
 	}
 }
 
 /* --------MAIN------------------- */
 
 .page{
-	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
 	flex: 1 1 auto;
 }
 
 .page__main-block {
-	
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
 }
 .main-block {
 	position:relative;
 }
+
 .main-block__container {
 
 }
@@ -207,14 +207,159 @@ body{
 	backdrop-filter: blur(60px);
 }
 
-@media (max-width: 628px){
-	.main-block__container{
+@media (max-width: 807px){
+	.main-block__title{
 		display: none;
 	}
-	.page{
-		height: 120px;
+	.page__main-block{
+		height: 350px;
 	}
 }
+/* 
+@media (max-width: 480px){
+	.page__main-block{
+		height: 140px;
+	}
+} */
+
+.page__help-items {
+	margin-top: -130px;
+}
+
+.help-items {
+}
+
+.help-items__container {
+
+}
+
+.help-items__body {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 30px;
+}
+
+/* @media (max-width:782px)
+{
+	.help-items__body {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 2fr;
+	}
+} */
+
+.help-items__column{
+
+}
+
+.help-items__item {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(60px);
+	color: rgb(24, 12, 12);
+}
+
+.help-item {
+	position: relative;
+}
+.help-item__title {
+	color: white;
+	font-size: 20px;
+	padding: 30px;
+	font-weight: 600;
+}
+
+.help-item__link{
+	color: inherit;
+}
+
+.help-item__text {
+	padding: 0px 30px 30px 30px;
+	color: white;
+	font-size: 18px;
+}
+
+@media (max-width : 807px)
+{
+	.help-items__body {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.item__text{
+		display: none;
+	}
+	.page__help-items {
+		margin-top: -240px;
+	}
+
+}
+
+@media (max-width : 536px)
+{
+	.page__main-block{
+		height: 500px;
+	}
+
+	.page__help-items {
+		margin-top: -300px;
+	}
+	
+	.help-items__body {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+}
+
+
+/* --------Карточки цветов/flowers------------------- */
+
+.page__flowers {
+	margin-top: 70px;
+}
+.flowers {
+}
+.flowers__container {
+}
+._container {
+}
+.flowers__body {
+	display: grid;
+	grid-template-columns: minmax(300px,550px) minmax(300px,550px);
+	/* grid-template-rows: minmax(350px,100%) minmax(50px,1fr); */
+	gap: 30px;
+}
+
+.flowers__items {
+	/* background: #000; */
+	background-color: white;
+	box-shadow: 4px 11px 8px 1px rgba(65, 122, 89, 0.27);
+	/* box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6); */
+}
+.item {
+	color: black;
+	padding: 30px;
+}
+.item__title {
+	font-size: 24px;
+	padding-bottom: 10px;
+	font-weight: 600;
+}
+
+.item__img{
+	margin-bottom: 10px;
+	height: 350px;
+	overflow: hidden;
+}
+
+.item__img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.item__text {
+	font-size: 18px;
+}
+
 
 /* --------ПОДВАЛ------------------- */
 
