@@ -64,7 +64,6 @@ body{
 	color: #e4ece3e8;
 	font-size: 16px;
 	font-weight: 500;
-	/* font-family: 'Open Sans', sans-serif; */
 }
 
 
@@ -73,8 +72,8 @@ body{
 .wrapper{
 	overflow: hidden;
 	min-height: 100%;
-	/* display: flex;
-	flex-direction: column; */
+	display: flex;
+	flex-direction: column;
 }
 
 ._container{
@@ -100,18 +99,27 @@ body{
 /* --------ШАПКА------------------- */
 
 .header {
-	position: absolute;
-	/* position: fixed; */
+	/* position: absolute; */
+	position: fixed;
 	width: 100%;
 	left: 0;
 	top: 0;
 	z-index: 50;
-	/* background: #000; */
+	padding-bottom: 1px;
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
 }
+
+
 .header__container {
+}
+
+.header__body{
+	position: relative;
 	display: flex;
-	min-height: 104px;
+	min-height: 84px;
 	align-items: center;
+	z-index: 2;
+	justify-content: space-between;
 }
 
 .header__logo {
@@ -120,19 +128,17 @@ body{
 	color: inherit;
 }
 .header__menu {
-	margin: 0px 0px 0px 140px;
 }
 
-@media (max-width: 992px){
-	.header__menu {
-		margin: 0px 0px 0px 100px;
-	}
-}
 
-@media (max-width: 767px){
+/* @media (max-width: 767px){
 	.header__menu {
 		margin: 0px 0px 0px 50px;
 	}
+} */
+
+@media (max-width: 692px){
+	/* сделать меню бургер */
 }
 
 .menu {
@@ -156,20 +162,13 @@ body{
 	font-size: 20px;
 }
 
-@media (max-width: 628px){
-	.menu__link {
-		font-size: 22px;
-	}
+.header__burger{
+	display: none;
 }
 
-@media (max-width: 450px){
-	.header__container{
-		flex-direction: column;
-	}
-	.header__logo{
-		padding: 8px 0px 7px 0px;
-	}
-}
+
+
+
 
 /* --------MAIN------------------- */
 
@@ -217,12 +216,10 @@ body{
 		height: 350px;
 	}
 }
-/* 
-@media (max-width: 480px){
-	.page__main-block{
-		height: 140px;
-	}
-} */
+
+
+
+/* -------------Ну тут иконки красивые для доп ссылок--------------- */
 
 .page__help-items {
 	margin-top: -130px;
@@ -293,13 +290,95 @@ body{
 	.page__help-items {
 		margin-top: -240px;
 	}
-
 }
+
+
+@media (max-width: 768px){
+
+	.header__body{
+	}
+
+	.header__menu{
+		margin:auto;
+		margin-top: -100%;
+		position: fixed;
+		width: 100%;
+		height: 250px;
+		top: 0;
+		left: 0;
+		background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
+		text-align: center;
+		transition: all 0.4s ease 0s;
+		border: 2px solid white;
+	}
+
+	.header__menu.active{
+		margin-top: 100px;
+		padding-top: 7px;
+	}
+
+	.page__help-items.active{
+		transition: all 0.2s ease 0s;
+		visibility: hidden;
+	}
+
+	.page__help-items.active a{
+		pointer-events: none;
+	}
+
+	.header__burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+	}
+
+	.header__burger span{
+		background-color: white;
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		left: 0;
+		top: 9px;
+	}
+
+	.header__burger::before, 
+	.header__burger::after{
+		content: '';
+		background-color: white;
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		left: 0;
+	}
+	.header__burger::before{
+		top: 0;
+	}
+	.header__burger::after{
+		bottom: 0;
+	}
+
+	.menu__list{
+		flex-direction: column;
+	}
+	.menu__item {
+		height: 50px;
+		margin: 0px;
+	}
+	.menu__item:last-child{
+		margin: 0px;
+	}
+}
+
 
 @media (max-width : 536px)
 {
 	.page__main-block{
 		height: 500px;
+	}
+
+	.header__menu{
+		height: 300px;
 	}
 
 	.page__help-items {
@@ -309,6 +388,23 @@ body{
 	.help-items__body {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
+	}
+}
+
+
+@media (max-width: 628px){
+	.menu__link {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 450px){
+	
+	.header__container{
+		flex-direction: column;
+	}
+	.header__body{
+		margin: 8px 0px 7px 0px;
 	}
 }
 
@@ -369,7 +465,6 @@ body{
 	font-style: italic;
 }
 
-
 @media (max-width: 807px){
 	.item__text{
 		display: none;
@@ -387,12 +482,19 @@ body{
 
 @media (max-width : 536px)
 {
+	.page__main-block{
+		height: 400px;
+	}
 	.flowers__body {
 		grid-template-columns: minmax(200px,550px);
 	}
 	.item__img{
 		height: auto;
 		margin-bottom: 15px;
+	}
+
+	.flowers__container{
+		margin-top: -10%;
 	}
 }
 
@@ -401,5 +503,38 @@ body{
 .footer{
 	margin-top: 40px;
 	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
-	min-height: 100px;
+	min-height: 80px;
 }
+
+.footer__container{
+	display: flex;
+	align-items: top;
+	padding: 20px;
+	max-height: 4em;
+	font-size: 20px;
+	line-height: 151%;
+}
+
+.footer__text1{
+	flex: 0 0 auto;
+}
+
+.footer__text2{
+	text-align: right;
+	flex: 1 1 auto;
+}
+
+@media (max-width: 922px){
+	.footer__container{
+		flex-direction: column;
+		align-items: center;
+		font-size: 15px;
+	}
+	.footer__text2{
+		text-align: center;
+	}
+	.footer__text2 p:first-child{
+		display: none;
+	}
+}
+
