@@ -263,7 +263,7 @@ body{
 }
 .help-item__title {
 	color: white;
-	font-size: 20px;
+	font-size: 18px;
 	padding: 30px;
 	font-weight: 600;
 }
@@ -275,7 +275,8 @@ body{
 .help-item__text {
 	padding: 0px 30px 30px 30px;
 	color: white;
-	font-size: 18px;
+	font-size: 16px;
+	text-align: justify;
 }
 
 @media (max-width : 807px)
@@ -412,7 +413,6 @@ body{
 /* --------Карточки цветов/flowers------------------- */
 
 .page__flowers {
-	/* background-image: url('../img/karen-martinez-_bHzC5CSyYY-unsplash.jpg'); */
 	margin-top: 70px;
 }
 .flowers {
@@ -538,3 +538,65 @@ body{
 	}
 }
 
+/* ---------------PAGE HELPFUL BLOCK--------------------- */
+
+.page__helpful-block {
+	position: relative;
+}
+.helpful-block {
+}
+
+.helpful-block__container {
+}
+
+.helpful-block__block {
+	padding: 114px 0px 30px 0px;
+	position: relative;
+	z-index: 2;
+}
+
+.helpful-title{
+	font-size: 35px;
+	color: black;
+	text-align: start;
+}
+
+.helpful-block__text{
+
+}
+
+.helpful-text{
+	color: black;
+	font-size: 20px;
+	padding-top: 10px;
+	line-height: 151%;
+}
+
+.helpful-text p{
+	padding-bottom: 20px;
+}
+
+.helpful-text h2{
+	font-weight: 800;
+	padding-bottom: 20px;
+	font-size: 24px;
+}
+
+
+.helpful-text p:last-child{
+	padding-bottom: 0px;
+}
+
+@media (max-width:456px){
+	.helpful-text{
+		font-size: 18px;
+		text-align: justify;
+	}
+	.helpful-title{
+		font-weight: 800;
+		font-size: 20px;
+	}
+	.helpful-text h2{
+		font-size: 20px;
+	}
+}
