@@ -60,7 +60,8 @@ h1,h2,h3,h4,h5,h6{
 /*--------------------*/
 
 body{
-	font-family: 'JetBrains Mono', monospace;
+	/* font-family: 'JetBrains Mono', monospace; */
+	font-family:  SSm A,Gotham SSm B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
 	color: #e4ece3e8;
 	font-size: 16px;
 	font-weight: 500;
@@ -180,7 +181,6 @@ body{
 	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
 }
 .main-block {
-	font-family:  SSm A,Gotham SSm B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
 	position:relative;
 }
 
@@ -224,6 +224,7 @@ body{
 
 .page__help-items {
 	margin-top: -130px;
+	margin-bottom: 70px;
 }
 
 .help-items {
@@ -267,7 +268,7 @@ body{
 	font-size: 18px;
 	padding: 30px;
 	font-weight: 600;
-	word-spacing: -0.2em;
+	/* word-spacing: -0.2em; */
 }
 
 .help-item__link{
@@ -291,7 +292,7 @@ body{
 		display: none;
 	}
 	.page__help-items {
-		margin-top: -240px;
+		margin-top: -200px;
 	}
 }
 
@@ -414,9 +415,21 @@ body{
 
 /* --------Карточки цветов/flowers------------------- */
 
+
+
+
 .page__flowers {
-	margin-top: 70px;
+	/* margin-top: 35px; */
 }
+
+.flowers__title{
+	font-size: 35px;
+	color: black;
+	text-align: center;
+	padding-bottom: 20px;
+	font-weight: 800;
+}
+
 .flowers {
 }
 .flowers__container {
@@ -498,6 +511,10 @@ body{
 	.flowers__container{
 		margin-top: -10%;
 	}
+
+	.flowers__title{
+		font-size: 26px;
+	}
 }
 
 /* --------ПОДВАЛ------------------- */
@@ -552,7 +569,7 @@ body{
 }
 
 .helpful-block__block {
-	padding: 114px 0px 30px 0px;
+	padding: 94px 0px 30px 0px;
 	position: relative;
 	z-index: 2;
 }
@@ -560,11 +577,11 @@ body{
 .helpful-title{
 	font-size: 35px;
 	color: black;
-	text-align: start;
+	text-align: center;
 }
 
 .helpful-block__text{
-
+	text-align: justify;
 }
 
 .helpful-text{
@@ -655,7 +672,7 @@ body{
 	text-decoration: underline;
 }
 
-a:visited{
+a {
 	color: inherit;
 }
 
@@ -764,14 +781,15 @@ a:visited{
 	padding: 114px 0px 141px 0px;
 	position: relative;
 	z-index: 2;
-	max-width: 900px;
+	/* max-width: 900px; */
 }
 
 .page__content{
 	padding : 15px;
 	box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 	border: 3px outset #9C3730;
-	border-radius: 0px 14px 0px 16px;
+	border-radius: 0px 14px 0px 14px;
+	margin-bottom: 20px;
 }
 
 .title {
@@ -782,6 +800,34 @@ a:visited{
 .context {
 }
 .page__help-me {
+	line-height: 151%;
+
 }
 .help-me {
+}
+
+.page__block a{
+	color: brown;
+
+}
+
+@media (max-width: 922px){
+	.page__title p{
+		font-size: 25px;
+		line-height: 100%;
+	}
+	.page__content{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 530px){
+	.page__title p{
+		font-size: 22px;
+		line-height: 100%;
+	}
+	.page__content{
+		font-size: 16px;
+		text-align: justify;
+	}
 }
