@@ -83,7 +83,7 @@ body{
 /* размер 1100 */
 
 ._container{
-	max-width: 1100px;
+	max-width: 1400px;
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
@@ -114,7 +114,7 @@ body{
 	z-index: 50;
 		/* чтобы разрыва не было между фонами */
 	padding-bottom: 1px;
-	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 25% no-repeat fixed;
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 20% no-repeat fixed;
 }
 
 .header__body{
@@ -164,7 +164,7 @@ body{
 }
 
 .page__main-block {
-	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 25%  no-repeat fixed;
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 20%  no-repeat fixed;
 }
 .main-block {
 	position:relative;
@@ -198,20 +198,13 @@ body{
 	}
 }
 
-
-
 /* -------------Ну тут иконки красивые для доп ссылок--------------- */
+
+/* три таблички построены на гридах и перестраиваются ниже */
 
 .page__help-items {
 	margin-top: -130px;
 	margin-bottom: 70px;
-}
-
-.help-items {
-}
-
-.help-items__container {
-
 }
 
 .help-items__body {
@@ -228,10 +221,6 @@ body{
 		grid-template-rows: 1fr 2fr;
 	}
 } */
-
-.help-items__column{
-
-}
 
 .help-items__item {
 	background: rgba(255, 255, 255, 0.1);
@@ -279,9 +268,6 @@ body{
 
 @media (max-width: 768px){
 
-	.header__body{
-	}
-
 	.header__menu{
 		margin:auto;
 		margin-top: -100%;
@@ -290,7 +276,7 @@ body{
 		height: 250px;
 		top: 0;
 		left: 0;
-		background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
+		background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 20% no-repeat fixed;
 		text-align: center;
 		transition: all 0.4s ease 0s;
 		border: 2px solid white;
@@ -392,44 +378,44 @@ body{
 	} */
 }
 
+/* ------------------конец css для табличек с доп ссылками- и акже полный адаптив для header и них же----------------------- */
 
 /* --------Карточки цветов/flowers------------------- */
 
-
-
-
 .page__flowers {
-	/* margin-top: 35px; */
+	display: flex;
+	align-items: flex-start;
 }
 
 .flowers__title{
 	font-size: 35px;
 	color: black;
-	text-align: center;
-	padding-bottom: 20px;
+	text-align: left;
+	margin-bottom: 10px;
+	padding: 15px;
+	background-color: white;
+	box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
+	border-radius: 5px;
 	font-weight: 800;
 }
 
-.flowers {
+.flowers__container{
+	max-width: 1000px;
+	right: 0px;
 }
-.flowers__container {
-}
-._container {
-}
+
 .flowers__body {
 	display: grid;
-	grid-template-columns: minmax(200px,550px) minmax(200px,550px);
-	/* grid-template-rows: minmax(350px,100%) minmax(50px,1fr); */
+	grid-template-columns: minmax(200px,auto) minmax(200px,auto);
 	gap: 30px;
 }
 
 .flowers__items {
-	/* background: #000; */
 	background-color: white;
 	box-shadow: 4px 11px 8px 5px rgba(65, 122, 89, 0.27);
 	border-radius: 5px;
-	/* box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6); */
 }
+
 .item {
 	color: black;
 	padding: 30px;
@@ -445,6 +431,7 @@ body{
 	position: relative;
 	overflow: hidden;
 	padding: 0px 0px 58% 0px;
+	border-radius: 5px;
 }
 
 .item__img img{
@@ -458,6 +445,30 @@ body{
 	font-size: 18px;
 	font-weight: 400;
 	font-style: italic;
+}
+
+/* новостная колонка */
+
+.news_items{
+	margin-left: 30px;
+	max-height: auto;
+	padding: 20px;
+	flex-grow: 1;
+	background-color: white;
+	 box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
+	border-radius: 6px 20px 0px 2px;
+}
+
+.news_header{
+	border-bottom: 2px solid rgba(18,33,11,0.56);
+}
+
+.news_title{
+	font-size: 24px;
+	font-weight: 800;
+	color: rgba(18,33,11,0.56);
+		text-align: center;
+	padding-bottom: 22px;
 }
 
 @media (max-width: 807px){
