@@ -106,16 +106,15 @@ body{
 
 /* --------ШАПКА------------------- */
 
-
-
 .header {
 	position: fixed;
 	width: 100%;
 	left: 0;
 	top: 0;
 	z-index: 50;
+		/* чтобы разрыва не было между фонами */
 	padding-bottom: 1px;
-	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 25% no-repeat fixed;
 }
 
 .header__body{
@@ -137,6 +136,7 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .menu__item {
 	margin: 7px 21px 0px 0px;
 }
@@ -156,23 +156,18 @@ body{
 	display: none;
 }
 
-
-
 /* --------MAIN------------------- */
+/*  этот блок с красивой цитатой и тремя статьями */
 
 .page{
 	flex: 1 1 auto;
 }
 
 .page__main-block {
-	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') top right no-repeat fixed;
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 25%  no-repeat fixed;
 }
 .main-block {
 	position:relative;
-}
-
-.main-block__container {
-
 }
 
 .main-block__block{
@@ -189,12 +184,10 @@ body{
 }
 
 
-.main-block__items {
-}
-.main-block__item {
+/* .main-block__item {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(60px);
-}
+} */
 
 @media (max-width: 807px){
 	.main-block__title{
