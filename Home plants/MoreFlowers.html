@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 	<link rel="stylesheet" href="css/style.css">
 	<meta charset="UTF-8">
 	<link
@@ -15,10 +13,10 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id='wrapper'>
 		<header class="header">
 			<div class="header__container _container">
-				<div class="header__body">
+				<div class="header__body" id="header--body">
 					<a href="MoreFlowers.html" class="header__logo">
 						MoreFlowers
 					</a>
@@ -83,7 +81,7 @@
 			<div class="page__flowers flowers _container">
 				<div class="flowers__container">
 					<div class="flowers__title">
-						Мои любимые цветы
+						Домашние растения
 					</div>
 					<div class="flowers__body">
 						<div class="flowers__items item">
@@ -215,11 +213,32 @@
 						</div>
 					</div>
 				</div>
-				<div class="news_items">
-					<div class="news_items-sticky">
-						<div class="news_header">
-							<div class="news_title">
-								Популярные видео
+				<div class="news_items-wrapper-outer" id="news_items-wrapper-outer">
+					<div class="news_items-wrapper-inner" id="news_items-wrapper-inner">
+						<div class="news_items" id="news_items">
+							<div class="news_items-sticky">
+								<div class="news_header">
+									<div class="news_title">
+										Интересности
+									</div>
+								</div>
+								<div class="sim-slider">
+									<ul class="sim-slider-list">
+									  <li><img src="http://pvbk.spb.ru/inc/slider/imgs/no-image.gif" alt="screen"></li> <!-- это экран -->
+									  <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet0.jpg" alt="0"></li>
+									  <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet1.jpg" alt="1"></li>
+									  <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet2.jpg" alt="2"></li>
+									  <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet3.jpg" alt="3"></li>
+									  <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet4.jpg" alt="4"></li>
+									  <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet5.jpg" alt="5"></li>
+									</ul>
+									<div class="sim-slider-arrow-left"></div>
+									<div class="sim-slider-arrow-right"></div>
+									<div class="dots_container">
+										<div class="sim-slider-dots">
+										</div>
+									</div>
+								  </div>
 							</div>
 						</div>
 					</div>

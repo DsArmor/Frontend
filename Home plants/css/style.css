@@ -83,7 +83,7 @@ body{
 /* размер 1100 */
 
 ._container{
-	max-width: 1400px;
+	max-width: 1250px;
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
@@ -130,6 +130,19 @@ body{
 	font-weight: 700;
 	font-size: 30px;
 	color: inherit;
+}
+
+a {
+	text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    transition: background-size .4s;
+}
+a:hover{
+	background-size: 100% 3px;
+
 }
 
 .menu__list {
@@ -203,8 +216,9 @@ body{
 /* три таблички построены на гридах и перестраиваются ниже */
 
 .page__help-items {
+	/* z-index: 40; */
 	margin-top: -130px;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 }
 
 .help-items__body {
@@ -223,16 +237,18 @@ body{
 } */
 
 .help-items__item {
-	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(60px);
-	color: rgb(24, 12, 12);
 	z-index: 2;
+	color: rgb(24, 12, 12);
+	/* background: url(http://files.all-free-download.com//downloadfiles/wallpapers/1920_1080/tropical_beach_paradise_5k_17484.jpg) no-repeat center; */
+	backdrop-filter: blur(5px);
+	background: rgba(38, 54, 34, 0.397);
 }
 
 .help-item {
 	position: relative;
 }
 .help-item__title {
+	z-index: 3;
 	color: white;
 	font-size: 18px;
 	padding: 30px;
@@ -384,24 +400,25 @@ body{
 
 .page__flowers {
 	display: flex;
-	align-items: flex-start;
 }
 
 .flowers__title{
-	font-size: 35px;
-	color: black;
-	text-align: left;
+	font-size: 30px;
+	color: rgba(6, 43, 11, 0.849);
+	text-align: center;
 	margin-bottom: 10px;
 	padding: 15px;
 	background-color: white;
 	box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
 	border-radius: 5px;
-	font-weight: 800;
+	font-weight: 700;
 }
 
 .flowers__container{
-	max-width: 1000px;
+	max-width: 850px;
+	width: 70%;
 	right: 0px;
+	z-index: 25;
 }
 
 .flowers__body {
@@ -415,6 +432,16 @@ body{
 	box-shadow: 4px 11px 8px 5px rgba(65, 122, 89, 0.27);
 	border-radius: 5px;
 }
+
+.flowers__container img{
+	transition: all 1s ease-out;
+}
+
+.flowers__container img:hover{
+	transform: scale(1.1);
+	/* transition: scale(1.1); */
+}
+
 
 .item {
 	color: black;
@@ -447,29 +474,7 @@ body{
 	font-style: italic;
 }
 
-/* новостная колонка */
 
-.news_items{
-	margin-left: 30px;
-	max-height: auto;
-	padding: 20px;
-	flex-grow: 1;
-	background-color: white;
-	 box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
-	border-radius: 6px 20px 0px 2px;
-}
-
-.news_header{
-	border-bottom: 2px solid rgba(18,33,11,0.56);
-}
-
-.news_title{
-	font-size: 24px;
-	font-weight: 800;
-	color: rgba(18,33,11,0.56);
-		text-align: center;
-	padding-bottom: 22px;
-}
 
 @media (max-width: 807px){
 	.item__text{
@@ -492,7 +497,7 @@ body{
 		height: 400px;
 	}
 	.flowers__body {
-		grid-template-columns: minmax(200px,550px);
+		grid-template-columns: minmax(200px,auto);
 	}
 	.item__img{
 		height: auto;
@@ -830,3 +835,204 @@ a {
 		text-align: justify;
 	}
 }
+
+/* --------------новостная колонка----------------- */
+
+.news_items-wrapper-outer{
+	margin-left: 30px;
+	padding-top: 0px;
+	flex-grow: 1;
+	max-height: auto;
+	min-width: 300px;
+	width: 30%;
+	box-sizing: border-box;
+
+}
+
+.aside-fixed--top .news_items-wrapper-outer{
+	position: fixed;
+	top: 0;
+	box-sizing: border-box;
+}
+
+.aside-fixed--top .news_items-wrapper-inner{
+	align-items: center;
+	width: 1200px;
+	margin: 0px auto;
+	margin-top: 92px;
+	display: flex;
+	justify-content: end;
+}
+
+.aside-fixed--top .news_items{
+	min-width: 300px;
+	max-width: 370px;
+	/* width: 30%; */
+}
+
+.news_items{
+	background-color: white;
+	box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
+	border-radius: 6px 20px 0px 2px;
+}
+
+.news_header{
+	/* border-bottom: 2px solid rgba(18,33,11,0.56); */
+}
+
+.news_title{
+	font-size: 25px;
+	font-weight: 700;
+	color: rgba(6, 43, 11, 0.849);
+	text-align: center;
+	padding-top: 14px;
+}
+/* 1128 */
+/* убрать на этой ширине новостную колонку */
+
+@media (max-width: 1268px){
+	.news_items-wrapper-outer{
+		position: absolute;
+		visibility: hidden;
+	}
+
+	.page__flowers{
+		align-items: center;
+		display: block;
+	}
+
+	.flowers__container{
+		max-width: 1400px;
+		min-width: auto;
+		width: 100%;
+		padding-right: 0px;
+		/* right: 0px; */
+		/* align-items: center; */
+	}
+}
+
+/* --------------------- */
+
+/* ---------------slider--------------- */
+
+.sim-slider img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.sim-slider {
+	min-width: 300px;
+	margin: 20px auto;
+	margin-top: 0px;
+	/* margin-left: 40px; */
+	padding: 25px 45px;
+	background-color: white;
+	/* box-shadow: 35px 1px 28px 1px rgba(34, 60, 80, 0.2); */
+	/* border-radius: 6px 20px 5px 0px; */
+	/* box-shadow: 10px 2px 14px 0px rgba(50, 50, 50, 0.56); */
+}
+
+/* General styles */
+.sim-slider {
+	position: relative;
+	padding-bottom: 5px;
+}
+
+.sim-slider-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+.sim-slider-element {
+	width: auto;
+	transition: opacity 1s ease-in;
+	opacity: 0;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	display: block;
+}
+
+/* Navigation item styles */
+div.sim-slider-arrow-left,
+div.sim-slider-arrow-right {
+	width: 12px;
+	height: 24px;
+	position: absolute;
+	cursor: pointer;
+	opacity: 0.6;
+	z-index: 4;
+}
+
+div.sim-slider-arrow-left {
+	margin-left: 5px;
+	padding-left: 13px;
+	left: 10px;
+	top: 40%;
+	display: block;
+	background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+	background-size: contain;
+}
+
+div.sim-slider-arrow-right {
+	margin-right: 5px;
+	padding-right: 13px;
+	right: 10px;
+	top: 40%;
+	display: block;
+	background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+	background-size: contain;
+  }
+  
+  div.sim-slider-arrow-left:hover {
+	opacity: 1.0;
+  }
+  
+  div.sim-slider-arrow-right:hover {
+	opacity: 1.0;
+  }
+
+.dots_container{
+	margin-top: 7px;
+	/* margin-bottom: 5px; */
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+  
+div.sim-slider-dots {
+	width: 100%;
+	height: auto;
+	/* position: absolute; */
+	left: 0;
+	bottom: 0;
+	z-index: 3;
+	text-align: center;
+}
+
+.sim-dot {
+	width: 13px;
+	height: 13px;
+	margin: 5px 7px;
+	padding: 0;
+	display: inline-block;
+	border-radius: 40px;
+	background: white;
+	border: 2px solid rgba(15,120,22,0.8);
+	cursor: pointer;
+  }
+
+.sim-dot:hover {
+  width: 17px;
+  height: 17px;
+  margin: 3px 9px;
+  padding: 0;
+  background: rgb(23, 54, 26);
+  display: inline-block;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+  /* ----рисование стрелки слайдера------------ */
