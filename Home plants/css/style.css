@@ -216,7 +216,7 @@ a:hover{
 /* три таблички построены на гридах и перестраиваются ниже */
 
 .page__help-items {
-	/* z-index: 40; */
+	z-index: 40;
 	margin-top: -130px;
 	margin-bottom: 50px;
 }
@@ -239,9 +239,21 @@ a:hover{
 .help-items__item {
 	z-index: 2;
 	color: rgb(24, 12, 12);
-	/* background: url(http://files.all-free-download.com//downloadfiles/wallpapers/1920_1080/tropical_beach_paradise_5k_17484.jpg) no-repeat center; */
-	backdrop-filter: blur(5px);
-	background: rgba(38, 54, 34, 0.397);
+	/* -webkit-filter: blur(5px);
+	-moz-filter: blur(5px); */
+}
+
+.help-items__item::before{
+	content: "";
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 20% no-repeat fixed;
+	position: absolute;
+	width: 110%;
+	height: 110%;
+	top: -5%;
+	left: -5%;
+	z-index: -1;
+	-webkit-filter: blur(65px);
+	filter: blur(65px);
 }
 
 .help-item {
