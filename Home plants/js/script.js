@@ -51,7 +51,6 @@ function Sim(sldrId) {
 };
 
 Sim.defaults = {
-
 	// Default options for the carousel
 	loop: true,     // Бесконечное зацикливание слайдера
 	auto: true,     // Автоматическое пролистывание
@@ -75,7 +74,11 @@ Sim.prototype.elemPrev = function(num) {
 	};
 	
 	this.sldrElements[this.currentElement].style.opacity = '1';
+	this.sldrElements[this.currentElement].style.visibility = 'visible';
+	this.sldrElements[this.currentElement].style.zIndex = '1';
 	this.sldrElements[prevElement].style.opacity = '0';
+	this.sldrElements[prevElement].style.zIndex = '0';
+	this.sldrElements[prevElement].style.visibility = 'hidden';
 
 	if(this.options.dots) {
 		this.dotOn(prevElement); this.dotOff(this.currentElement)
@@ -97,7 +100,11 @@ Sim.prototype.elemNext = function(num) {
 	};
 
 	this.sldrElements[this.currentElement].style.opacity = '1';
+	this.sldrElements[this.currentElement].style.visibility = 'visible';
+	this.sldrElements[this.currentElement].style.zIndex = '1';
 	this.sldrElements[prevElement].style.opacity = '0';
+	this.sldrElements[prevElement].style.zIndex = '0';
+	this.sldrElements[prevElement].style.visibility = 'hidden';
 
 	if(this.options.dots) {
 		this.dotOn(prevElement); this.dotOff(this.currentElement)
@@ -151,7 +158,8 @@ Sim.initialize = function(that) {
 		setAutoScroll();
 		// Остановка прокрутки при наведении мыши на элемент
 		that.sldrList.addEventListener('mouseenter', function() {clearInterval(that.autoScroll)}, false);
-		that.sldrList.addEventListener('mouseleave', setAutoScroll, false)
+		that.sldrList.addEventListener('mouseleave', setAutoScroll, false);
+		// that.sldrList.add
 	};
 
 	if(that.options.arrows) {  // инициализация стрелок
