@@ -42,6 +42,7 @@ button::-moz-focus-inner {
 	border:0;
 }
 
+
 a,a:visited{
 	text-decoration: none;
 }
@@ -142,7 +143,6 @@ a {
 }
 a:hover{
 	background-size: 100% 3px;
-
 }
 
 .menu__list {
@@ -575,6 +575,7 @@ filter: blur(10px);}
 
 .helpful-block__block {
 	margin: 15px;
+	margin-left: 0px;
 	max-width: 1000px;
 	/* padding: 94px 0px 30px 0px; */
 	position: relative;
@@ -888,8 +889,7 @@ a {
 .news_items{
 	color: rgba(6, 43, 11, 0.849);
 	background-color: white;
-	box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
-	border-radius: 6px 20px 0px 2px;
+	/* border-radius: 6px 20px 0px 2px; */
 }
 
 .news_header{
@@ -901,7 +901,12 @@ a {
 	font-weight: 700;
 	text-align: center;
 	padding-top: 14px;
+	padding-bottom: 14px;
 	color:inherit;
+	background-color: white;
+	box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
+	margin-bottom: 10px;
+	border-radius: 5px;
 }
 /* 1128 */
 /* убрать на этой ширине новостную колонку */
@@ -943,13 +948,15 @@ a {
 
 .sim-slider {
 	min-width: 300px;
-	margin: 20px auto;
+	/* margin: 20px auto; */
 	margin-top: 0px;
 	/* margin-left: 40px; */
 	padding: 25px 45px;
 	background-color: white;
-	/* box-shadow: 35px 1px 28px 1px rgba(34, 60, 80, 0.2); */
+
+	box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
 	/* border-radius: 6px 20px 5px 0px; */
+	border-radius: 5px;
 	/* box-shadow: 10px 2px 14px 0px rgba(50, 50, 50, 0.56); */
 }
 
@@ -957,14 +964,13 @@ a {
 .sim-slider {
 	position: relative;
 	padding-bottom: 5px;
-	overflow: hidden;
+	/* border-bottom: 5px solid rgba(28,110,164,0.5);	overflow: hidden; */
 }
 
 .sim-slider-list {
 	align-items: center;
 	margin-bottom: 25px;
 	padding: 0;
-	/* overflow: hidden; */
 	position: relative;
 	border-radius: 5px;
 }
@@ -993,8 +999,10 @@ a {
 	font-size: 25px;
 	text-align: center;
 	margin-top: 5px;
-	color: inherit;
+	color: black;
+	padding-bottom: 5px;
 }
+
 
 /* Navigation item styles */
 div.sim-slider-arrow-left,
@@ -1075,4 +1083,70 @@ div.sim-slider-dots {
   cursor: pointer;
 }
 
-  /* ----рисование стрелки слайдера------------ */
+
+.delimeter{
+	background-color:#0c3615;
+	position: absolute;
+	width: 280px;
+	height: 5px;
+	margin-left: 45px;
+}
+
+/* ---------колонка с рандомным цветком----------------- */
+
+.focus {
+	margin-top: 10px;
+	color:inherit;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	padding-top: 0px;
+	align-items: center;
+	box-shadow: -1px 1px 28px 1px rgba(34, 60, 80, 0.2);
+	border-radius: 5px;
+}
+  
+  .countdown-title {
+	color: #0c3615;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	padding-top: 14px;
+	font-size: 25px;
+	margin: 10px 0px 20px;
+  }
+  
+  .countdown {
+	color: #fff;
+	display: inline-block;
+	font-weight: 600;
+	text-align: center;
+	margin: auto;
+	padding-left: 17px;
+	font-size: 20px;
+}
+  
+  .countdown-number {
+	padding: 10px;
+	border-radius: 3px;
+	/* background: #345851; */
+	display: inline-block;
+	background: url('../img/annie-spratt-vs6a4EHj_Ro-unsplash.jpg') 65% 20% no-repeat fixed;
+
+  }
+  
+  .countdown-time {
+	padding: 10px;
+	padding-bottom: 5px;
+	border-radius: 3px;
+	/* background: #29c9ab; */
+	display: inline-block;
+
+  }
+
+  
+  .countdown-text {
+	display: block;
+	padding-top: 5px;
+	font-size: 16px;
+  }
